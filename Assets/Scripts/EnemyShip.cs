@@ -1,5 +1,5 @@
 
-using System;
+
 using UnityEngine;
 
 public class EnemyShip : Ship
@@ -9,6 +9,7 @@ public class EnemyShip : Ship
     public float TimerDuration = 3.0f;
 
     public Gun gun;
+
 
     void FixedUpdate()
     {

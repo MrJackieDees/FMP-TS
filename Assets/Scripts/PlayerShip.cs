@@ -6,7 +6,7 @@ public class PlayerShip : Ship
 
     Gun[] guns;
 
-    float moveSpeed = 7;
+    float moveSpeed = 14;
 
     bool moveUp;
     bool moveDown;
@@ -53,6 +53,8 @@ public class PlayerShip : Ship
     private void FixedUpdate()
     {
         Vector2 pos = transform.position;
+
+        
 
         float moveAmount = moveSpeed * Time.fixedDeltaTime;
         Vector2 move = Vector2.zero;

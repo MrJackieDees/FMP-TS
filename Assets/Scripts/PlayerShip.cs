@@ -43,7 +43,7 @@ public class PlayerShip : Ship
             shoot = false;
             foreach(Gun gun in guns)
             {
-                gun.Shoot();
+                gun.shootdefault();
             }
         }
           

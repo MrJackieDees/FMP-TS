@@ -445,7 +445,7 @@ RectTransform:
   m_GameObject: {fileID: 338864448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.98, y: 0.67, z: 1}
+  m_LocalScale: {x: 0.96, y: 0.67, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 619362486}
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.10721479, g: 0.8742138, b: 0.25777215, a: 1}
+  m_Color: {r: 0.10588235, g: 0.8745098, b: 0.11511712, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1828,7 +1828,7 @@ Transform:
   m_GameObject: {fileID: 1437379938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1846,7 +1846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdeb0ea1d436aec4093cd3d0c6e8cf73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Gun
-  bullet: {fileID: 6194837502782894582, guid: 52a3ae4df1db4be439a9b0b13564a486, type: 3}
+  bullet: {fileID: 8847093902791965602, guid: 9be2fd2734bce3b438877507cce4c264, type: 3}
 --- !u!1 &1876859292
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2429,7 @@ Transform:
   m_GameObject: {fileID: 2099900550}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2444,10 +2444,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099900550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdeb0ea1d436aec4093cd3d0c6e8cf73, type: 3}
+  m_Script: {fileID: 11500000, guid: efe71ecc7dd6dd64a9831cdcbc6a620e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gun
-  bullet: {fileID: 7709163667707135105, guid: f59f05057930a0b489263781e4fd1d67, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyGun
+  bullet: {fileID: 8342615406603570889, guid: b66f1d02b02ec0c4db479a681f2be612, type: 3}
+  shotgunBullet: {fileID: 2539652329615221675, guid: 13370e2708aded54bb3448e30688ccfe, type: 3}
 --- !u!1 &2111177224
 GameObject:
   m_ObjectHideFlags: 0

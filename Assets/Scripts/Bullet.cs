@@ -10,6 +10,10 @@ public class Bullet : MonoBehaviour
 
     public float Damage;
 
+    float deltaAngle;
+
+    public float BulletLife = 2.0f;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         var HurtBox = other.GetComponent<HurtBox>();
@@ -23,13 +27,13 @@ public class Bullet : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Destroy(gameObject, 3);
+        Destroy(gameObject, BulletLife);
     }
 
     // Update is called once per frame
     void Update()
     {
-        velocity = direction * speed;
+        velocity = -gameObject.transform.right * speed;
     }
 
     private void FixedUpdate()

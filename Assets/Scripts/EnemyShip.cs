@@ -8,7 +8,7 @@ public class EnemyShip : Ship
 
     public float TimerDuration = 3.0f;
 
-    public Gun gun;
+    public EnemyGun gun;
 
 
     void FixedUpdate()
@@ -23,7 +23,9 @@ public class EnemyShip : Ship
 
     private void shoot()
     {
-        gun.Shoot();
+        gun.shootdefault();
+
+        gun.shotgun();
 
         Timer = 0f;
     }

@@ -3,9 +3,15 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
 
-    public Bullet bullet;
-    public void Shoot()
+    public ShotgunBullet bullet;
+    public void Shoot(GameObject BulletToShoot)
     {
-        GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
+        GameObject go = Instantiate(BulletToShoot, transform.position, Quaternion.identity);
     }
+
+    public void shootdefault()
+    {
+        Shoot(bullet.gameObject);
+    }
+    
 }

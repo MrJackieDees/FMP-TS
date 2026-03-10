@@ -2449,6 +2449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyGun
   bullet: {fileID: 8342615406603570889, guid: b66f1d02b02ec0c4db479a681f2be612, type: 3}
   shotgunBullet: {fileID: 2539652329615221675, guid: 13370e2708aded54bb3448e30688ccfe, type: 3}
+  circleBullet: {fileID: 2296691286157480050, guid: 533c27e1bc80c4543b2cb605944616dc, type: 3}
 --- !u!1 &2111177224
 GameObject:
   m_ObjectHideFlags: 0

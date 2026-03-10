@@ -138,10 +138,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   direction: {x: -1, y: 0}
-  speed: 20
+  speed: 12
   velocity: {x: 0, y: 0}
   Damage: 15
-  BulletLife: 2
+  BulletLife: 3
 --- !u!58 &-3154091078113989595
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98d18004d7462f4980df8187622bd68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyShip
-  explosion: {fileID: 8973925774891500545, guid: e6e6d296e0a1997448df122ac200ad67, type: 3}
+  explosion: {fileID: 1211217690310568474, guid: 27205c8066d27044fbb6981c7c7e0040, type: 3}
   TimerDuration: 3
   gun: {fileID: 2099900552}
 --- !u!58 &611202375
@@ -1896,7 +1896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387a2ec891eb38543b9531e649473239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShip
-  explosion: {fileID: 8973925774891500545, guid: e6e6d296e0a1997448df122ac200ad67, type: 3}
+  explosion: {fileID: 1211217690310568474, guid: 27205c8066d27044fbb6981c7c7e0040, type: 3}
 --- !u!58 &1876859295
 CircleCollider2D:
   m_ObjectHideFlags: 0

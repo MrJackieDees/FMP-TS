@@ -6,8 +6,15 @@ public class EnemyGun : Gun
 {
     public ShotgunBullet shotgunBullet;
 
-    internal void shotgun()
+    public ShotgunBullet circleBullet;
+
+    public void shotgun()
     {
         Shoot(shotgunBullet.gameObject);
+    }
+
+    public void circle()
+    {
+        Shoot(circleBullet.gameObject);
     }
 }

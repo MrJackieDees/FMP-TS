@@ -27,6 +27,8 @@ public class EnemyShip : Ship
 
         gun.shotgun();
 
+        gun.circle();
+
         Timer = 0f;
     }
 }

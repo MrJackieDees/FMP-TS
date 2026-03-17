@@ -1236,6 +1236,7 @@ Transform:
   m_Children:
   - {fileID: 2111177225}
   - {fileID: 2099900551}
+  - {fileID: 946536324}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &611202374
@@ -1253,6 +1254,7 @@ MonoBehaviour:
   explosion: {fileID: 1211217690310568474, guid: 27205c8066d27044fbb6981c7c7e0040, type: 3}
   TimerDuration: 3
   gun: {fileID: 2099900552}
+  rotatinggun: {fileID: 946536325}
 --- !u!58 &611202375
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1617,6 +1619,56 @@ MonoBehaviour:
   minimumPlayerPosition: -4
   maximumPlayerPosition: 22
   playerSpeedInfluence: 5
+--- !u!1 &946536323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 946536324}
+  - component: {fileID: 946536325}
+  m_Layer: 8
+  m_Name: RotatingEnemyGun
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &946536324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946536323}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.19, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 611202373}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &946536325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946536323}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92db4e12c7b966409bf22631c1eabfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  bullet: {fileID: 8342615406603570889, guid: b66f1d02b02ec0c4db479a681f2be612, type: 3}
+  shotgunBullet: {fileID: 2539652329615221675, guid: 13370e2708aded54bb3448e30688ccfe, type: 3}
+  circleBullet: {fileID: 2296691286157480050, guid: 533c27e1bc80c4543b2cb605944616dc, type: 3}
+  rotationspeed: 1000
+  RotatingTimerDuration: 0.001
+  VolleyTimerDuration: 1
 --- !u!1 &1091718596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,7 +2480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099900550}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.6, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

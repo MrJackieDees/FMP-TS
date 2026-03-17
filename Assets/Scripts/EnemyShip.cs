@@ -1,5 +1,6 @@
 
 
+using System;
 using UnityEngine;
 
 public class EnemyShip : Ship
@@ -10,6 +11,8 @@ public class EnemyShip : Ship
 
     public EnemyGun gun;
 
+    public RotatingEnemyGun rotatinggun;
+
 
     void FixedUpdate()
     {
@@ -19,6 +22,7 @@ public class EnemyShip : Ship
         {
             shoot();
         }
+
     }
 
     private void shoot()
@@ -28,6 +32,8 @@ public class EnemyShip : Ship
         gun.shotgun();
 
         gun.circle();
+
+        rotatinggun.shootvolley();
 
         Timer = 0f;
     }

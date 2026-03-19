@@ -54,5 +54,8 @@ TagManager:
   - name: PlayerSprite
     uniqueID: 4274849231
     locked: 0
+  - name: VFX
+    uniqueID: 1756739941
+    locked: 0
   m_RenderingLayers:
   - Default

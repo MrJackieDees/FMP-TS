@@ -18,7 +18,7 @@ public class EnemyShip : Ship
     {
         Timer += Time.deltaTime;
 
-        if(Timer >= TimerDuration)
+        if (Timer >= TimerDuration)
         {
             shoot();
         }

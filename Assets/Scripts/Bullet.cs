@@ -21,6 +21,8 @@ public class Bullet : MonoBehaviour
         if(HurtBox != null)
         {
             HurtBox.TakeDamage(Damage);
+
+            Destroy(gameObject);
         }
     } 
 

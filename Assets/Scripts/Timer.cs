@@ -1,18 +1,34 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
-    float Duration = 1.0f;
+    public float Duration = 1.0f;
 
-    float currentValue = 0;
+    [NonSerialized]
+
+    public float currentValue = 0;
 
     public UnityAction WhenDoneCounting;
+
+    [NonSerialized]
+
+    public bool isCounting;
+
+    public void StartCounting(float NewDuration)
+    {
+        Duration = NewDuration;
+
+        StartCounting();
+    }
 
     public void StartCounting()
     {
         enabled = true;
+
+        isCounting = true;
     }
 
     private void FixedUpdate()
@@ -23,10 +39,11 @@ public class Timer : MonoBehaviour
         {
             currentValue = 0f;
 
-            WhenDoneCounting?.Invoke();
-
             enabled = false;
+
+            isCounting = false;
+
+            WhenDoneCounting?.Invoke();
         }
     }
-
 }

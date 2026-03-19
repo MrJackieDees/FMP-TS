@@ -6,7 +6,7 @@ public class PlayerShip : Ship
 
     Gun[] guns;
 
-    float moveSpeed = 14;
+
 
     bool moveUp;
     bool moveDown;
@@ -14,7 +14,7 @@ public class PlayerShip : Ship
     bool moveRight;
 
     bool shoot;
-[NonSerialized]
+    [NonSerialized]
     public float deltaPositionx = 0;
 
     // public Animator Controller;
@@ -22,11 +22,11 @@ public class PlayerShip : Ship
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       guns = transform.GetComponentsInChildren<Gun>();
+        guns = transform.GetComponentsInChildren<Gun>();
 
-       var shootAnimation = Animator.StringToHash("Base Layer.ATTACK");
+        var shootAnimation = Animator.StringToHash("Base Layer.ATTACK");
 
-       // Controller.Play(shootAnimation);
+        // Controller.Play(shootAnimation);
     }
 
     // Update is called once per frame
@@ -41,52 +41,53 @@ public class PlayerShip : Ship
         if (shoot)
         {
             shoot = false;
-            foreach(Gun gun in guns)
+            foreach (Gun gun in guns)
             {
                 gun.shootdefault();
             }
         }
-          
+
     }
 
 
     private void FixedUpdate()
     {
-        Vector2 pos = transform.position;
 
-        
-
-        float moveAmount = moveSpeed * Time.fixedDeltaTime;
         Vector2 move = Vector2.zero;
 
         if (moveUp)
         {
-            move.y += moveAmount;
+            move.y += 1;
         }
 
         if (moveDown)
         {
-            move.y -= moveAmount;
+            move.y -= 1;
         }
 
         if (moveLeft)
         {
-            move.x -= moveAmount;
+            move.x -= 1;
         }
 
         if (moveRight)
         {
-            move.x += moveAmount;
+            move.x += 1;
         }
 
-        float moveMagnitude = Mathf.Sqrt(move.x * move.x + move.y * move.y);
-        if (moveMagnitude > moveAmount)
-        {
-            float ratio = moveAmount / moveMagnitude;
-            move *= ratio;
-        }
-        
-        pos += move;
+        move.Normalize();
+
+        moveAround(move);
+    }
+
+    private void moveAround(Vector2 moveInput)
+    {
+        Vector2 previousPosition = transform.position;
+
+        moveShipAround(moveInput);
+
+        Vector2 pos = transform.position;
+
         if (pos.x <= -4)
         {
             pos.x = -4;
@@ -106,8 +107,9 @@ public class PlayerShip : Ship
 
         transform.position = pos;
 
-        deltaPositionx = move.x;
+        var newPosition = pos;
 
+        deltaPositionx = (newPosition - previousPosition).x;
     }
 
 }

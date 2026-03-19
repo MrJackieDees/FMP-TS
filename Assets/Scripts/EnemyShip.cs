@@ -13,6 +13,15 @@ public class EnemyShip : Ship
 
     public RotatingEnemyGun rotatinggun;
 
+    private Vector3 _targetRoamPosition;
+
+    public float CloseEnoughThresh = 0.0001f;
+
+
+    void Awake()
+    {
+        setTargetRoamPosition(transform.position);
+    }
 
     void FixedUpdate()
     {
@@ -23,6 +32,27 @@ public class EnemyShip : Ship
             shoot();
         }
 
+        MoveTowardTargetPosition();
+
+    }
+
+    private void MoveTowardTargetPosition()
+    {
+        var VectorTowardsTarget = _targetRoamPosition - gameObject.transform.position;
+
+        if(isCloseEnough(VectorTowardsTarget))
+        {
+            return;
+        }
+
+        var moveInput = VectorTowardsTarget.normalized;
+
+        moveShipAround(moveInput);
+    }
+
+    private bool isCloseEnough(Vector3 vectorTowardsTarget)
+    {
+        return vectorTowardsTarget.magnitude < CloseEnoughThresh;
     }
 
     private void shoot()
@@ -37,4 +67,10 @@ public class EnemyShip : Ship
 
         Timer = 0f;
     }
+
+    internal void setTargetRoamPosition(Vector3 newPosition)
+    {
+        _targetRoamPosition = newPosition;
+    }
+
 }

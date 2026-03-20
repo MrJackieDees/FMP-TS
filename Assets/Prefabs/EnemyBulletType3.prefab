@@ -140,7 +140,7 @@ MonoBehaviour:
   direction: {x: -1, y: 0}
   speed: 17
   velocity: {x: 0, y: 0}
-  Damage: 15
+  Damage: 10
   BulletLife: 3
 --- !u!58 &5901477744649380789
 CircleCollider2D:

@@ -15,6 +15,8 @@ public class HealthBar : MonoBehaviour
 
     public Ship Ship;
 
+    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

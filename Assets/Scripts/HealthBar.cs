@@ -1,6 +1,8 @@
 using UnityEngine.UI;
 using UnityEngine;
 using System;
+using FMODUnity;
+using FMOD.Studio;
 
 public class HealthBar : MonoBehaviour
 
@@ -15,19 +17,22 @@ public class HealthBar : MonoBehaviour
 
     public Ship Ship;
 
-    
+    public StudioEventEmitter emitter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GameObject obj = GameObject.Find("FMODListener"); 
 
+        if (obj != null)
+        {
+            emitter = obj.GetComponent<StudioEventEmitter>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateHealthPercent();
-
         Overlay.fillAmount = HealthPercent;
     }
 
@@ -36,7 +41,23 @@ public class HealthBar : MonoBehaviour
         Debug.Log(CurrentHealth);
         CurrentHealth -= DamageAmount;
 
+        CurrentHealth = Mathf.Max(CurrentHealth, 0f);
+
+        RefreshHealth();
+
         TryDie();
+    }
+
+    private void RefreshHealth()
+    {
+        HealthPercent = (float)CurrentHealth / HealthTotal;
+
+        if (emitter != null)
+        {
+            emitter.SetParameter("EnemyHealth", HealthPercent * 100f);
+
+            Debug.Log("Setting FMOD param: " + HealthPercent * 100f);
+        }
     }
 
     private void TryDie()
@@ -52,10 +73,5 @@ public class HealthBar : MonoBehaviour
     private void Die()
     {
         Ship.Die();
-    }
-
-    private void UpdateHealthPercent()
-    {
-        HealthPercent = CurrentHealth / HealthTotal;
     }
 }

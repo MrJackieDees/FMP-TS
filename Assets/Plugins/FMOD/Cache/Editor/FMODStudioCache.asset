@@ -28,7 +28,7 @@ MonoBehaviour:
   - {fileID: -630445097221317233}
   MinDistance: 1
   MaxDistance: 20
-  Length: 34971
+  Length: 35662
 --- !u!114 &-4690920140610122707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
     data1: 23581180
     data2: 1572115819
   Type: 0
-  IsGlobal: 1
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &-4420855627856292057
@@ -68,34 +68,10 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639101399116523643
+  lastModified: 639102120272036791
   FileSizes:
   - Name: 
     Value: 934
-  Exists: 1
---- !u!114 &-4035138844556289194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PlayerHealth
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: PlayerHealth
-  StudioPath: parameter:/PlayerHealth
-  Min: 0
-  Max: 100
-  Default: 100
-  ID:
-    data1: 2112457671
-    data2: 1949193019
-  Type: 0
-  IsGlobal: 1
-  Labels: []
   Exists: 1
 --- !u!114 &-1991509222719968246
 MonoBehaviour:
@@ -112,32 +88,8 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639101399116508487
+  lastModified: 639102120272011704
   FileSizes: []
-  Exists: 1
---- !u!114 &-1653534759103771414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/EnemyHealth
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorParamRef
-  Name: EnemyHealth
-  StudioPath: parameter:/EnemyHealth
-  Min: 0
-  Max: 100
-  Default: 100
-  ID:
-    data1: 23581180
-    data2: 1572115819
-  Type: 0
-  IsGlobal: 1
-  Labels: []
   Exists: 1
 --- !u!114 &-630445097221317233
 MonoBehaviour:
@@ -160,7 +112,7 @@ MonoBehaviour:
     data1: 2112457671
     data2: 1949193019
   Type: 0
-  IsGlobal: 1
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &11400000
@@ -181,15 +133,13 @@ MonoBehaviour:
   - {fileID: 3679321096342329036}
   EditorEvents:
   - {fileID: -8283962652576565410}
-  EditorParameters:
-  - {fileID: -4035138844556289194}
-  - {fileID: -1653534759103771414}
+  EditorParameters: []
   MasterBanks:
   - {fileID: -1991509222719968246}
   StringsBanks:
   - {fileID: -4420855627856292057}
   cacheVersion: 131858
-  cacheTime: 639101430293134682
+  cacheTime: 639105624859961072
   SerializableEventsDict:
   - key: event:/FMP
     index: 0
@@ -208,6 +158,6 @@ MonoBehaviour:
   Path: FMOD/Desktop/VariableMusicSystem.bank
   Name: VariableMusicSystem
   StudioPath: bank:/VariableMusicSystem
-  lastModified: 639101430293134682
+  lastModified: 639105624859961072
   FileSizes: []
   Exists: 1

@@ -771,6 +771,7 @@ MonoBehaviour:
   CurrentHealth: 100
   Overlay: {fileID: 1091718598}
   Ship: {fileID: 611202374}
+  emitter: {fileID: 0}
 --- !u!1 &436397912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1719,7 @@ MonoBehaviour:
   CurrentHealth: 100
   Overlay: {fileID: 338864450}
   Ship: {fileID: 1876859294}
+  emitter: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,7 +3014,11 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
-  Params: []
+  Params:
+  - Name: EnemyHealth
+    Value: 100
+  - Name: PlayerHealth
+    Value: 100
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -3194,7 +3200,7 @@ Transform:
   m_GameObject: {fileID: 1744853585}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.079999, y: -2, z: 0}
+  m_LocalPosition: {x: 11.12, y: -2, z: 0}
   m_LocalScale: {x: 0.7, y: 80, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

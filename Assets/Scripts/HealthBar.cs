@@ -19,6 +19,8 @@ public class HealthBar : MonoBehaviour
 
     public StudioEventEmitter emitter;
 
+    public String OwnerName = "PlayerHealth";
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,7 +56,7 @@ public class HealthBar : MonoBehaviour
 
         if (emitter != null)
         {
-            emitter.SetParameter("EnemyHealth", HealthPercent * 100f);
+            emitter.SetParameter(OwnerName, HealthPercent * 100f);
 
             Debug.Log("Setting FMOD param: " + HealthPercent * 100f);
         }

@@ -772,6 +772,7 @@ MonoBehaviour:
   Overlay: {fileID: 1091718598}
   Ship: {fileID: 611202374}
   emitter: {fileID: 0}
+  OwnerName: EnemyHealth
 --- !u!1 &436397912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1721,7 @@ MonoBehaviour:
   Overlay: {fileID: 338864450}
   Ship: {fileID: 1876859294}
   emitter: {fileID: 0}
+  OwnerName: PlayerHealth
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,6 +2982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1621467381}
   - component: {fileID: 1621467380}
+  - component: {fileID: 1621467382}
   m_Layer: 0
   m_Name: FMODListener
   m_TagString: Untagged
@@ -3037,6 +3040,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1621467382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621467379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af5fda55719df494cbd3e25dc09a8358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FMODMarkerListener
+  emitter: {fileID: 1621467380}
+  gun: {fileID: 2099900552}
+  rotatinggun: {fileID: 946536325}
 --- !u!1 &1669881408
 GameObject:
   m_ObjectHideFlags: 0
